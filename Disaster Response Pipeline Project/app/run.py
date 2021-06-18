@@ -26,11 +26,11 @@ def tokenize(text):
     return clean_tokens
 
 # load data
-engine = create_engine('sqlite:///../data/YourDatabaseName.db')
-df = pd.read_sql_table('YourTableName', engine)
+engine = create_engine('sqlite:///../data/DisasterResponse.db')
+df = pd.read_sql_table('DisasterResponse',engine)
 
 # load model
-model = joblib.load("../models/your_model_name.pkl")
+model = joblib.load("../models/classifier.pkl")
 
 
 # index webpage displays cool visuals and receives user input text for model
@@ -40,11 +40,18 @@ def index():
     
     # extract data needed for visuals
     # TODO: Below is an example - modify to extract data for your own visuals
-    genre_counts = df.groupby('genre').count()['message']
+    genre_counts = df[df['related']==1].groupby('genre').count()['message']
+    genre_counts_0 = df[df['related']==0].groupby('genre').count()['message']
     genre_names = list(genre_counts.index)
     
     # create visuals
     # TODO: Below is an example - modify to create your own visuals
+    ## All 36 features to plot
+    features_to_plot = df.drop(['id', 'message', 'original', 'genre'], axis = 1).sum()/len(df)
+    features_to_plot = cat_props.sort_values(ascending = False)
+    feature_names = list(features_to_plot.index)
+    
+    
     graphs = [
         {
             'data': [

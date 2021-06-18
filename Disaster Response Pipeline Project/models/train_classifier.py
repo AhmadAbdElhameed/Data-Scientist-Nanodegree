@@ -28,8 +28,8 @@ import pickle
 
 def load_data(database_filepath):
     # load data from database
-    engine = create_engine('sqlite:///disaster.db')
-    df = pd.read_sql_table("disaster",con=engine)
+    engine = create_engine('sqlite:///' + database_filepath)
+    df = pd.read_sql_table('DisasterResponse', engine)
     ## create training data
     X = df['message']
     ## create label data
@@ -58,6 +58,17 @@ def tokenize(text):
 
 def build_model():
     """ grid search max feature parameter in our data transformation through AdaBoost classifier! """
+    """
+    Arguments:
+    None
+    """
+    
+    """   
+    Returns:
+    cv: gridsearchcv object. Gridsearchcv object that transforms the data, creates the 
+    model object and finds the optimal model parameters.
+    """
+    
     pipeline_adaboost = Pipeline([("vect",CountVectorizer(tokenizer=tokenize)),
           ("tfidf",TfidfTransformer()),
           ('clf', MultiOutputClassifier(AdaBoostClassifier()))])
@@ -88,9 +99,7 @@ def evaluate_model(model, X_test, Y_test, category_names):
 
 def save_model(model, model_filepath):
     """ Export the model as a pickle file """
-    filename = 'disaster_model.pkl'
-    pickle.dump(model, open(filename, 'wb'))
-
+    pickle.dump(model.best_estimator_, open(model_filepath, 'wb'))
 
 def main():
     if len(sys.argv) == 3:

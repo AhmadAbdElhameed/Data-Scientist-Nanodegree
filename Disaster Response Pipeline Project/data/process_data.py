@@ -70,8 +70,8 @@ def save_data(df, database_filename):
     None
     """
     from sqlalchemy import create_engine
-    engine = create_engine('sqlite:///disaster.db')
-    df.to_sql('disaster', engine, index=False)
+    engine = create_engine('sqlite:///' + database_filename )
+    df.to_sql('DisasterResponse', engine, index=False, if_exists='replace')
 
 
 def main():
