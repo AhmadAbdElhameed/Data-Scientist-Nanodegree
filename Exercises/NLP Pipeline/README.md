@@ -1,5 +1,5 @@
 # Natural Language Processing Pipelines
-Exercises for NLP pipeline:
+**Exercises for NLP pipeline:**
 
 ### Text Processing
 1- Cleaning
