@@ -17,6 +17,9 @@ def load_data(messages_filepath, categories_filepath):
     messages = pd.read_csv(messages_filepath)
     ## read categories dataset
     categories = pd.read_csv(categories_filepath)
+    ## delete rows that contains related-2
+    ##related_2_index = categories[categories['categories'].str.contains("related-2")].index
+    ##categories = categories.drop(categories.index[related_2_index])
     ## merge the two datasets in dataframe
     df = pd.merge(messages,categories,on="id")
     return df
@@ -31,30 +34,25 @@ def clean_data(df):
     """Returns:
     df: dataframe. Dataframe containing cleaned version of input dataframe.
     """
-    categories = df.categories.str.split(";",expand=True)
-    # select the first row of the categories dataframe
-    row = categories.iloc[0]
+       # expand the categories column
+    categories = df.categories.str.split(';', expand=True)
+    row = categories[:1]
 
-    # use this row to extract a list of new column names for categories.
-    # one way is to apply a lambda function that takes everything 
-    # up to the second to last character of each string with slicing
-    category_colnames = []
-    for ind in range(len(row)):
-        category_colnames.append(row[ind])
-    # rename the columns of `categories`
+    # get the category names
+    category_colnames = row.applymap(lambda s: s[:-2]).iloc[0, :].tolist()
     categories.columns = category_colnames
-    for column in categories:
-        # set each value to be the last character of the string
-        categories[column] = categories[column].astype(str).str[-1]
-        # convert column from string to numeric
-        categories[column] = pd.to_numeric(categories[column])
-        
-    df.drop('categories',axis=1,inplace = True)
-    # concatenate the original dataframe with the new `categories` dataframe
-    df = pd.concat([df,categories],axis=1,join="inner")
-    ## drop duplicated rows
-    df.drop_duplicates(inplace=True)
-    ## return cleaned dataframe
+
+    # get only the last value in each value as an integer
+    categories = categories.applymap(lambda s: int(s[-1]))
+
+    # add the categories back to the original df
+    df.drop('categories', axis=1, inplace=True)
+    df = pd.concat([df, categories], axis=1)
+
+    # clean up the final data
+    df.drop_duplicates(subset='message', inplace=True)
+    df.dropna(subset=category_colnames, inplace=True)
+    df.related.replace(2, 0, inplace=True)
     return df
 
 
