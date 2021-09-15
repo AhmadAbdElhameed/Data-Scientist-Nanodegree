@@ -1,6 +1,12 @@
 # Data Science Blog Post
 
-##Introduction
+### Table of Contents
+- Introduction
+- Data Wrangling
+- Exploratory Data Analysis
+- Conclusions
+- 
+## Introduction
 
 I selected the soccer database from Kaggle. It contains more than 25,000 matches and more than 10,000 players ,
  players and from several European countries from 2008 to 2016. By means of Exploratory Data Analysis method. 
@@ -14,3 +20,20 @@ and cleaning our dataset.
 we can predict the the winner of match based on this dataset
 we have the history of teams matches and thier players?
 can we identify the team or player belong to the best teams/players ?
+
+## Research Question 1
+at the end when megre all tables there will be cells have nulls ?
+
+yes ,due to different shapes of tables
+
+## Research Question 2
+when merged ,it will affect in prediction ?
+
+I think it is ,and we should select algorithm to work well with that dataset
+
+## Conclusions
+Analyzing the league, country, player, player attributes, team, team atributes nad match tables gave a better understanding of the data. once features are meerged pass it to machine learning algorithm to predict the winner of the future match.
+
+We use player attributes table to groups/cluster the players based on its skills like "passing","long pass" etc,to identify which player belong to this group.
+
+And we can use any table and make our predction on it ,I selected the player attributes to make my own
