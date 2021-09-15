@@ -5,9 +5,12 @@
 
 ## Projects 
 ### 1. Data Science Blog Post
-In this project, I did the analysis of Stack Overflow Survey Data 2019. You can find my Medium Blog Post in this link for the full report. The jupyter notebook for this project is located in folder 1 - Data Science Blog Post.
-
-Because the data for this project is quite big and I could not put it in the github repository, you can download the data from here. We are going to use the survey_results_public.csv file.
+I selected the soccer database from Kaggle. It contains more than 25,000 matches and more than 10,000 players ,
+ players and from several European countries from 2008 to 2016. By means of Exploratory Data Analysis method. 
+Although we won’t be getting into the details of it for our example, the dataset even has attributes on weekly
+ game updates, team line up, and detailed match events. The goal of this notebook is to walk you through an end
+ to end process of analyzing a dataset . Our simple analytical process will include some steps for exploring 
+and cleaning our dataset.
 
 ### 2. Disaster Response Pipeline Project
 In this project, we are going to built a web app to do Machine Learning task, which is classifying a message. You can check the running web app in this link.
