@@ -43,3 +43,6 @@ Analyzing the league, country, player, player attributes, team, team atributes n
 We use player attributes table to groups/cluster the players based on its skills like "passing","long pass" etc,to identify which player belong to this group.
 
 And we can use any table and make our predction on it ,I selected the player attributes to make my own
+
+## Medium link
+https://am2958.medium.com/soccer-data-analysis-e911eccc8369
