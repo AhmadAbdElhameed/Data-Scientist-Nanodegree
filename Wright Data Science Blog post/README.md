@@ -17,9 +17,9 @@ and cleaning our dataset.
 
 ### Research Questions
 
-we can predict the the winner of match based on this dataset
-we have the history of teams matches and thier players?
-can we identify the team or player belong to the best teams/players ?
+- we can predict the the winner of match based on this dataset
+- we have the history of teams matches and thier players?
+- can we identify the team or player belong to the best teams/players ?
 
 ## Research Question 1
 at the end when megre all tables there will be cells have nulls ?
@@ -28,6 +28,12 @@ yes ,due to different shapes of tables
 
 ## Research Question 2
 when merged ,it will affect in prediction ?
+
+I think it is ,and we should select algorithm to work well with that dataset
+
+## Research Question 3
+is there a correlation betwween features ?
+- there is positive correlation betwwen attack features and negative between attack and defense features .
 
 I think it is ,and we should select algorithm to work well with that dataset
 
