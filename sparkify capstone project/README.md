@@ -1,22 +1,22 @@
-Sparkify-Capstone-Project
-Determine customer churn for a music streaming company called Sparkify.
+# Sparkify-Capstone-Project
+## Task : Determine customer churn for a music streaming for Sparkify company.
 
-Table of Contents
-Installation
-Project Motivation
-File Descriptions
-Results
-Licensing, Authors, and Acknowledgements
-Installation
-This project uses the following software and python libraries
+## Table of Contents
+- Installation
+- Project Motivation
+- File Descriptions
+- Results
+- Licensing, Authors, and Acknowledgements
+## Installation
+**This project uses the following software and python libraries**
 
-Python 3.6
-NumPy
-Pandas
-scikit-learn
-matplotlib
-Pyspark-2.4.1
-You will also need to have software installed to run and execute a Jupyter Notebook
+- Python 3.6
+- Pyspark-2.4.1
+- NumPy
+- Pandas
+- scikit-learn
+- matplotlib
+- Jupyter Notebook
 
 Project Motivation
 Imagine you are working for music streaming company like Spotify or Pandora called Sparkify.Millions of users stream thier favorite songs everyday. Each user uses either the Free-tier with advertisement between the songs or the premium Subscription Plan.Users can upgrade, downgrade or cancel thier service at any time.Hence, it's crucial to make sure that users love the service provided by Sparkify. Every time a users interacts with the Sparkify app data is generated. Events such as playing a song, logging out, like a song etc. are all recorded. All this data contains key insights that can help the business thrive. The goal of this project is then to analyse this data and predict which group of users are expected to churn - either downgrading from premium to free or cancel thier subscriptions altogether.
