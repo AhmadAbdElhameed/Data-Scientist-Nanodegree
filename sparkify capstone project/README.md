@@ -27,6 +27,21 @@ Events such as playing a song, logging out, like a song etc. are all recorded.
 All this data contains key insights that can help the business thrive. 
 The goal of this project is then to analyse this data and predict which group of users are expected to churn - either downgrading from premium to free or cancel thier subscriptions altogether.
 
+## Project Definition
+###Project Overview
+Sparkify Capstone Project is Udacity’s Data Science final project it explores the user churn rate for Sparkify company. Dataset provided with the 128MB of activity log for a number of users and the different activities that can be done via the (web) app.
+###Problem Statement
+the problem is to find some features that correlate whether a user will churn or not.
+Definition of Churn: The user completing the cancellation process and reaching the “Cancellation Completed” page.
+What I will do in this project
+1. Load the dataset
+2. Clean up any null and space values
+3. Explore the dataset and learn some basic insights about it
+4. create a new dataset containing only the features we want
+5. Engineer new features to help me to improve prediction
+6. compare between 5 algorithms to find the best one
+
+
 ## Results
 We have analysed the sparkify dataset and come up with new features to predict churn. 
 We then created a machine learning model and tuned it to improve its performance.
