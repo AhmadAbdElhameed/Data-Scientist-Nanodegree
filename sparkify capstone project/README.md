@@ -33,7 +33,7 @@ We then created a machine learning model and tuned it to improve its performance
 We achieved an accuracy score of - and F1 score of - on the test dataset.
 
 ## Conclusion
-We are able to achieve an accuracy score of 56 % with random forest and naive bayes
+We are able to achieve an accuracy score of 61 % with random forest and naive bayes
 
 ## Blog Post
 https://am2958.medium.com/sparkify-capstone-project-2b9eb2bc4a76
