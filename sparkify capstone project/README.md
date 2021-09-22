@@ -28,9 +28,9 @@ All this data contains key insights that can help the business thrive.
 The goal of this project is then to analyse this data and predict which group of users are expected to churn - either downgrading from premium to free or cancel thier subscriptions altogether.
 
 ## Project Definition
-###Project Overview
+### Project Overview
 Sparkify Capstone Project is Udacity’s Data Science final project it explores the user churn rate for Sparkify company. Dataset provided with the 128MB of activity log for a number of users and the different activities that can be done via the (web) app.
-###Problem Statement
+### Problem Statement
 the problem is to find some features that correlate whether a user will churn or not.
 Definition of Churn: The user completing the cancellation process and reaching the “Cancellation Completed” page.
 What I will do in this project
@@ -41,7 +41,16 @@ What I will do in this project
 5. Engineer new features to help me to improve prediction
 6. compare between 5 algorithms to find the best one
 
+## Metrics
+I will use accuracy score
+**Accuracy Score: a metric that anyone can understand**
 
+##Analysis
+###Data Exploration and Questions
+####Dataset
+Each row represents an activity that one user undertook at a particular time from a particular device. If the activity was listening to a song (most of them are), then we will see the artist and song they listened to. we have 278,154 rows over 24 columns.
+The dataset contains log files that generate entries whenever a user makes an action on a site, like picking the next song, giving a song a ‘thumbs down, or landing onto a new page. These files take into account information about the user, such as their location, user agent string for accessing the site, and account level: free or paid. It’s important to note that those who use the free service receive advertisements. Let’s take a look at
+https://miro.medium.com/max/623/1*M5Sm-BR2B7sxeeQRKq80PQ.png
 ## Results
 We have analysed the sparkify dataset and come up with new features to predict churn. 
 We then created a machine learning model and tuned it to improve its performance.
