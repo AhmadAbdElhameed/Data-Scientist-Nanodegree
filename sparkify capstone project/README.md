@@ -91,14 +91,26 @@ root
  |-- event_time: string (nullable = true)
  
  |-- registration_time: string (nullable = true)
- 
+### Missing Data
+In terms of null values present, we have two cases:
+#### case 1: userId, userAgent, firstName , lastName, gender, location, registration
+About 8,000 rows are sessions picked up before the user has logged in — all redundant data for our purposes and to be cleaned away.
+#### case 2:artist, length, song
+About 58,000 rows are nulls occur when the user adds friends or gives a song thumbs up, all useful for our purposes and definitely data to keep.
+## Modeling:
+I split the full dataset into train and test sets. Test out the baseline of four machine learning methods: Logistic Regression, Decision Tree Classifier, Naive Bayes, Random Forest Classifier, and GradientBoostedTreeClassifier.
+
+
 ## Results
-We have analysed the sparkify dataset and come up with new features to predict churn. 
-We then created a machine learning model and tuned it to improve its performance.
-We achieved an accuracy score of - and F1 score of - on the test dataset.
-
+I have analyzed the sparkify dataset and come up with new features to predict churn. The best performance models are random forest and gradient boosted tree
+## Model Tuning and Improve Performance
+I will use Random Forest Tree to perform cross-validation
+there was a little bit increasing in accuracy .
 ## Conclusion
-We are able to achieve an accuracy score of 61 % with random forest and naive bayes
-
+We are able to achieve an accuracy score of 60 % with random forest and 60 for Gradient Boosted Tree and after applied cross-validation, the accuracy increased by almost 3%
+## Future Work
+Feature Engineering and Modeling we used Spark and whilst it's greater to have a tool that can handle big data
+it's great for large datasets where you can run out of memory, but very time-consuming when you are running through the processing steps every time.
+There is potential to improve the model and add a lot more features from the activity log data provided.
 ## Blog Post
 https://am2958.medium.com/sparkify-capstone-project-2b9eb2bc4a76
