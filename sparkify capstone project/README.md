@@ -45,12 +45,34 @@ What I will do in this project
 I will use accuracy score
 **Accuracy Score: a metric that anyone can understand**
 
-##Analysis
-###Data Exploration and Questions
-####Dataset
+## Analysis
+### Data Exploration and Questions
+#### Dataset
 Each row represents an activity that one user undertook at a particular time from a particular device. If the activity was listening to a song (most of them are), then we will see the artist and song they listened to. we have 278,154 rows over 24 columns.
 The dataset contains log files that generate entries whenever a user makes an action on a site, like picking the next song, giving a song a ‘thumbs down, or landing onto a new page. These files take into account information about the user, such as their location, user agent string for accessing the site, and account level: free or paid. It’s important to note that those who use the free service receive advertisements. Let’s take a look at
-https://miro.medium.com/max/623/1*M5Sm-BR2B7sxeeQRKq80PQ.png
+
+root
+ |-- artist: string (nullable = true)
+ |-- auth: string (nullable = true)
+ |-- firstName: string (nullable = true)
+ |-- gender: string (nullable = true)
+ |-- itemInSession: long (nullable = true)
+ |-- lastName: string (nullable = true)
+ |-- length: double (nullable = true)
+ |-- level: string (nullable = true)
+ |-- location: string (nullable = true)
+ |-- method: string (nullable = true)
+ |-- page: string (nullable = true)
+ |-- registration: long (nullable = true)
+ |-- sessionId: long (nullable = true)
+ |-- song: string (nullable = true)
+ |-- status: long (nullable = true)
+ |-- ts: long (nullable = true)
+ |-- userAgent: string (nullable = true)
+ |-- userId: string (nullable = true)
+ |-- event_time: string (nullable = true)
+ |-- registration_time: string (nullable = true)
+ 
 ## Results
 We have analysed the sparkify dataset and come up with new features to predict churn. 
 We then created a machine learning model and tuned it to improve its performance.
