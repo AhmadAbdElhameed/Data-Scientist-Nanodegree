@@ -13,9 +13,7 @@ Although we won’t be getting into the details of it for our example, the datas
 and cleaning our dataset.
 
 ### 2. Disaster Response Pipeline Project
-In this project, we are going to built a web app to do Machine Learning task, which is classifying a message. You can check the running web app in this link.
-
-In order to run this project, you need the model (pickle file) and since the size is too big for github, you can download the pickle model in .
+The goal of the project is to classify the disaster messages into categories. In this project, I analyzed disaster data from Figure Eight to build a model for an API that classifies disaster messages. Through a web app, the user can input a new message and get classification results in several categories. The web app also display visualizations of the data.
 
 ### 3. Data Scientist Capstone Project
 For the Capstone Project, I chose the “Optimizing App Offers With Starbucks” project, which basically trying to solve the problem on how to send the offer to the right customers. I did the analysis of the starbucks offers data and wrote the complete analysis in my Medium Blog Post, you can read it .
