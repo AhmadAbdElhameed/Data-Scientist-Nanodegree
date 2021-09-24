@@ -15,5 +15,10 @@ and cleaning our dataset.
 ### 2. Disaster Response Pipeline Project
 The goal of the project is to classify the disaster messages into categories. In this project, I analyzed disaster data from Figure Eight to build a model for an API that classifies disaster messages. Through a web app, the user can input a new message and get classification results in several categories. The web app also display visualizations of the data.
 
-### 3. Data Scientist Capstone Project
-For the Capstone Project, I chose the “Optimizing App Offers With Starbucks” project, which basically trying to solve the problem on how to send the offer to the right customers. I did the analysis of the starbucks offers data and wrote the complete analysis in my Medium Blog Post, you can read it .
+### 3. Recommendations with IBM
+For this project we will analyze the interactions that users have with articles on the IBM Watson Studio platform, and make recommendations to them about new articles we think they will like. Below is an example of what the dashboard could look like displaying articles on the IBM Watson Platform. In order to determine which articles to show to each user, we will be performing a study of the data available on the IBM Watson Studio platform.
+
+### 4. Data Scientist Capstone Project
+#### sparkify-capstone-project
+**This is the capstone project,as part of this one churn prediction system is built using pyspark.**
+In this project, we will use PySpark to predict if a customer will cancel the subscription or not for a online music streaming company called Sparkify. This is a classification problem, as we will predict if a customer will churn or not. This is a pain area in all the areas now a days, IT, Healthcare, Infrastructure etc.
